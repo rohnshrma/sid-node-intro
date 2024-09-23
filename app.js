@@ -1,22 +1,21 @@
-import http from "http";
-const PORT = 3000;
-const host = "localhost";
+import express from "express";
+const app = express();
+const PORT = 4000;
 
-const server = http.createServer((req, res) => {
-  res.setHeader("Content-Type", "text/plain");
-
-  if (req.url === "/" && req.method === "GET") {
-    res.statusCode = 200;
-    res.end("HomePage");
-  } else if (req.url === "/about" && req.method === "GET") {
-    res.statusCode = 200;
-    res.end("AboutPage");
-  }
-
-  res.statusCode = 404;
-  res.end("Page Not Found");
+// routes
+app.route("/").get((req, res) => {
+  //   res.send("Home Page");
+  res.sendFile(process.cwd() + "/pages/index.html");
 });
 
-server.listen(PORT, host, () => {
-  console.log("server started on port", PORT);
+app.route("/about").get((req, res) => {
+  res.send("About Page");
+});
+app.route("/contact").get((req, res) => {
+  res.send("Contact Page");
+});
+
+// server setup
+app.listen(PORT, () => {
+  console.log("server started on port ", PORT);
 });

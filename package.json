@@ -5,9 +5,12 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-  "start" : "node app.js"
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "express": "^4.21.0"
+  }
 }
