@@ -1,0 +1,13 @@
+{
+  "name": "intro",
+  "version": "1.0.0",
+  "description": "node introduction",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+  "start" : "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": []
+}
