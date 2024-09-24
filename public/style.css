@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: olive;
+}
+
+ul a {
+  color: #fff;
+}
+
+.wrapper {
+  margin: 4rem auto 0;
+  padding: 2rem;
+  width: 40%;
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
